@@ -1,6 +1,12 @@
 .jumbotron {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
     color: black;
+    background-color:rgb(30, 243, 30);
+    border-bottom: 12px solid black;
+    border-top: 12px solid black;
+    border-left: 200px solid black;
+    border-right: 200px solid black;
     padding-bottom: 2px;
     padding-top: 2px;
 }
