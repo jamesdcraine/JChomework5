@@ -14,4 +14,4 @@
 
 //save button
 
-//somehow updating colors based on current time
+//somehow update colors based on current time
