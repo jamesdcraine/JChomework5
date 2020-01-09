@@ -6,21 +6,21 @@ function getLocalStorage(key) {
     }
 }
 //pull up document
-$(document).ready(function() {
+$( document ).ready(function() {
     $("#currentDay").text(moment().format("dddd, MMMM Do" + ", 2020"));
     for (let i = 8; i < 24; i++) {
 
 //create 1 row
-var row = $ ('<div data-time=data-time={i}$ id=${i}' class= "row">');
+var row = $(`<div data-time=${i} id='${i}' class="row">`);
 
 //create column 1
 var column1 = $('<div class="col-sm-4"> <p class = "hour">' + formatAMPM(i) + '</p>');
 
 //create column 2
-var column2 = $('<div class="col-sm-4"><textarea id=text${i} class="description" placeholder="Add your text here..."></textarea>');
+var column2 = $('<div class="col-sm-4 past"><textarea id=text${i} class="description" placeholder="Add your text here..."></textarea>');
 
 //create column 3
-var column3 = $(`<div class="col-sm-4"><button class="saveBtn" id=${i}><i class="fas fa-save"></i></button>`);
+var column3 = $(`<div class="col-sm-4"><button class="saveBtn" id=${i}><i class="fas fa-save"></i></button>`)
 
 // add columns to row
 row.append(column1);
@@ -39,9 +39,25 @@ function formatAMPM(hours) {
     return hours + ampm;
 }
 
-var enterHours;
 formatAMPM();
 
-//save button
+function updateColors(){
+    var currentTime = new Date().getHours();
+    for (var i = 9; i < 18; i++) { 
+    console.log(currentTime, $(`#${i}`).data("time"));
+     if ($(`#${i}`).data("time") == currentTime){
+        $(`#text${i}`).addClass( "present");
+    } else if (currentTime < $(`#${i}`).data("time")) {
+        $(`#text${i}`).addClass( "future");
+    }}}
 
-//somehow update colors based on current time
+setInterval(function() {
+updateColors();
+}, 1000);
+
+var saveBtn = $('.saveBtn');
+saveBtn.on('click', function(){
+let eventId = $(this).attr('id');
+let eventText = $(this).parent().siblings().children('.description').val();
+localStorage.setItem(eventId, eventText);
+});});
