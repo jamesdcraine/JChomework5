@@ -5,20 +5,20 @@ function getLocalStorage(key) {
         $(`#text${key}`).text(value);
     }
 }
-//pull up document
-$(document).ready(function () {
-    $("#currentDay").text(moment().format("h:mm A" + ", " + "dddd, MMMM Do" + ", " + "YYYY"));
 
+//pull up document
+$(document).ready(function() {
+    $("#currentDay").text(moment().format("h:mm A" + ", " + "dddd, MMMM Do" + ", " + "YYYY"));
     for (let i = 8; i < 18; i++) {
 
         //create 1 row
         var row = $(`<div data-time=${i} id='${i}' class="row">`);
 
         //create column 1
-        var column1 = $('<div class="col-sm-3"> <p class = "hour">' + formatAMPM(i) + '</p>');
+        var column1 = $('<div class="col-sm-2"> <p class="hour">' + formatAMPM(i) + '</p>');
 
         //create column 2
-        var column2 = $('<div class="col-sm-7 past"><textarea id=text${i} class="description" placeholder="Add   your   text   here  . . ."></textarea>');
+        var column2 = $('<div class="col-sm-8 past"><textarea id=text${i} class="description" placeholder="Add your text here ..."></textarea>');
 
         //create column 3
         var column3 = $(`<div class="col-sm-2"><button class="saveBtn" id=${i}><i class="fas fa-save"></i></button>`)
@@ -35,27 +35,28 @@ $(document).ready(function () {
     }
 
     function formatAMPM(hours) {
-        var ampm = hours >= 12 ? ' PM' : ' AM';
+        var ampm = hours >= 12 ? ' pm' : ' am';
         hours = hours % 12;
         hours = hours ? hours : 12;
         return hours + ampm;
     }
 
-    formatAMPM();
+formatAMPM();
 
 function updateColors(){
         var currentTime = new Date().getHours();
-        for (var i = 9; i < 18; i++) { 
+        for (var i = 8; i < 18; i++) { 
         console.log(currentTime, $(`#${i}`).data("time"));
          if ($(`#${i}`).data("time") == currentTime){
             $(`#text${i}`).addClass( "present");
-        } else if (currentTime < $(`#${i}`).data("time")) {
+        } 
+        else if (currentTime < $(`#${i}`).data("time")) {
             $(`#text${i}`).addClass( "future");
         }
     }
 }
 
-    setInterval(function () {
+    setInterval(function() {
         updateColors();
     }, 1000);
 
@@ -64,5 +65,4 @@ function updateColors(){
         let eventId = $(this).attr('id');
         let eventText = $(this).parent().siblings().children('.description').val();
         localStorage.setItem(eventId, eventText);
-    });
-});
+    });});
