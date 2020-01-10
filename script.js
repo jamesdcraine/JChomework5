@@ -7,7 +7,7 @@ function getLocalStorage(key) {
 }
 //pull up document
 $(document).ready(function () {
-    $("#currentDay").text(moment().format("h:mm a" + ", " + "dddd, MMMM Do" + ", " + "YYYY"));
+    $("#currentDay").text(moment().format("h:mm A" + ", " + "dddd, MMMM Do" + ", " + "YYYY"));
 
     for (let i = 8; i < 18; i++) {
 
@@ -18,7 +18,7 @@ $(document).ready(function () {
         var column1 = $('<div class="col-sm-3"> <p class = "hour">' + formatAMPM(i) + '</p>');
 
         //create column 2
-        var column2 = $('<div class="col-sm-7 past"><textarea id=text${i} class="description" placeholder="A d d   y o u r   t e x t   h e r e  . . ."></textarea>');
+        var column2 = $('<div class="col-sm-7 past"><textarea id=text${i} class="description" placeholder="Add   your   text   here  . . ."></textarea>');
 
         //create column 3
         var column3 = $(`<div class="col-sm-2"><button class="saveBtn" id=${i}><i class="fas fa-save"></i></button>`)
@@ -35,7 +35,7 @@ $(document).ready(function () {
     }
 
     function formatAMPM(hours) {
-        var ampm = hours >= 12 ? 'pm' : 'am';
+        var ampm = hours >= 12 ? ' PM' : ' AM';
         hours = hours % 12;
         hours = hours ? hours : 12;
         return hours + ampm;
