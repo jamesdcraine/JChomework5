@@ -8,8 +8,8 @@ function getLocalStorage(key) {
 
 //pull up document
 $(document).ready(function() {
-    $("#currentDay").text(moment().format("h:mm A" + ", " + "dddd, MMMM Do" + ", " + "YYYY"));
-    for (let i = 8; i < 18; i++) {
+    $("#currentDay").text(moment().format("h:mm a" + ", " + "dddd, MMMM Do" + ", " + "YYYY"));
+    for (let i = 9; i < 18; i++) {
 
         //create 1 row
         var row = $(`<div data-time=${i} id='${i}' class="row">`);
@@ -40,18 +40,17 @@ $(document).ready(function() {
         hours = hours ? hours : 12;
         return hours + ampm;
     }
-
 formatAMPM();
 
 function updateColors(){
         var currentTime = new Date().getHours();
-        for (var i = 8; i < 18; i++) { 
+        for (var i = 9; i < 18; i++) { 
         console.log(currentTime, $(`#${i}`).data("time"));
          if ($(`#${i}`).data("time") == currentTime){
-            $(`#text${i}`).addClass( "present");
+            $(`#text${i}`).addClass("present");
         } 
         else if (currentTime < $(`#${i}`).data("time")) {
-            $(`#text${i}`).addClass( "future");
+            $(`#text${i}`).addClass("future");
         }
     }
 }

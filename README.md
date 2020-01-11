@@ -45,3 +45,5 @@ Poor time management can result in missed meetings and deadlines or create the a
  
  <b>Screenshots of deployed application: </b>
 
+ <img src="assets/screenshot.pjg">
+
