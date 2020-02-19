@@ -1,0 +1,47 @@
+.col-sm-8 {
+    padding-top: 11px;  
+}
+
+.col-sm-2 {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: lightblue;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+body {
+    background-color: red;
+}
+
+.card {
+    border: 2px black solid;
+}
+
+.form-control {
+    border: 2px black solid;
+}
+
+.saveBtn {
+    color: black;
+}
+
+.saveBtn i:hover {
+    font-size: 22px;
+    color: white;
+  }
+
+  .card-body :hover {
+    background-color: chocolate;
+    width: auto;
+  }
+
+#nineAM, #tenAM, #elevenAM, #twelvePM, #onePM, #twoPM, #threePM, #fourPM, #fivePM {
+    background-color: teal;
+    border: teal 5px solid;
+}

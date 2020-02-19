@@ -7,6 +7,8 @@
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!-- font awesome -->
+<script src="https://kit.fontawesome.com/b3d4efdc4f.js" crossorigin="anonymous"></script>
 <!-- my css -->
 <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
@@ -14,12 +16,17 @@
     <title>Document</title>
 </head>
 <body>
+   
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-          <h1 class="display-4">Dayfucking planner again</h1>
-          <p class="lead">fuck you</p>
+          <h1 class="display-4">My Super Dayplanner</h1>
+          <h4 class="currentDateTime"><p id="moment"></p></h4>
+          <p class="lead">organize your day!</p>
         </div>
+      
       </div>
+
+     
 
 <div class="container">
 <div class="row">
@@ -31,18 +38,17 @@
 </div>
 </div>
 
-    <div class="col-sm-7">
-    <div class="card">
-    <div class="card-body">
-        notes area placeholder
+    <div class="col-sm-8">
+        <div class="form-group textarea"><div id="nineAM">
+        <textarea class="form-control" placeholder="text goes here..."></textarea></div>
+          </div>
     </div>
-    </div>
-    </div>
+
 
     <div class="col-sm-2">
         <div class="card">
         <div class="card-body">
-            save btn
+            <div class ="saveBtn"><i class="far fa-save"></i></div>
         </div>
         </div>
         </div>
@@ -56,55 +62,25 @@
 
 <div class="container">
     <div class="row">
-    <div class="col-sm-2">
-    <div class="card">
-    <div class="card-body">
-        10 AM 
-    </div>
-    </div>
-    </div>
-    
-        <div class="col-sm-7">
-        <div class="card">
-        <div class="card-body">
-            notes area placeholder
-        </div>
-        </div>
-        </div>
-    
-        <div class="col-sm-2">
-            <div class="card">
-            <div class="card-body">
-                save btn
-            </div>
-            </div>
-            </div>
-      
-    </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
         <div class="col-sm-2">
         <div class="card">
         <div class="card-body">
-            11 AM 
+            10 AM 
         </div>
         </div>
         </div>
         
-            <div class="col-sm-7">
-            <div class="card">
-            <div class="card-body">
-                notes area placeholder
-            </div>
-            </div>
-            </div>
+        <div class="col-sm-8">
+            <div class="form-group textarea"><div id="tenAM">
+            <textarea class="form-control" placeholder="text goes here..."></textarea></div>
+              </div>
+        </div>
+        
         
             <div class="col-sm-2">
                 <div class="card">
                 <div class="card-body">
-                    save btn
+                    <div class ="saveBtn"><i class="far fa-save"></i></div>
                 </div>
                 </div>
                 </div>
@@ -112,28 +88,27 @@
         </div>
         </div>
 
-        <div class="container">
-            <div class="row">
+    <div class="container">
+        <div class="row">
             <div class="col-sm-2">
             <div class="card">
             <div class="card-body">
-                12 PM 
+                11 AM 
             </div>
             </div>
             </div>
             
-                <div class="col-sm-7">
-                <div class="card">
-                <div class="card-body">
-                    notes area placeholder
-                </div>
-                </div>
-                </div>
+            <div class="col-sm-8">
+                <div class="form-group textarea"><div id="elevenAM">
+                <textarea class="form-control" placeholder="text goes here..."></textarea></div>
+                  </div>
+            </div>
+            
             
                 <div class="col-sm-2">
                     <div class="card">
                     <div class="card-body">
-                        save btn
+                        <div class ="saveBtn"><i class="far fa-save"></i></div>
                     </div>
                     </div>
                     </div>
@@ -141,28 +116,26 @@
             </div>
             </div>
 
-            <div class="container">
-                <div class="row">
+        <div class="container">
+            <div class="row">
                 <div class="col-sm-2">
                 <div class="card">
                 <div class="card-body">
-                    1 PM 
+                    12 PM 
                 </div>
                 </div>
                 </div>
                 
-                    <div class="col-sm-7">
-                    <div class="card">
-                    <div class="card-body">
-                        notes area placeholder
-                    </div>
-                    </div>
-                    </div>
+                <div class="col-sm-8">
+                    <div class="form-group textarea"><div id="twelvePM">
+                    <textarea class="form-control" placeholder="text goes here..."></textarea></div>
+                      </div>
+                </div>
                 
                     <div class="col-sm-2">
                         <div class="card">
                         <div class="card-body">
-                            save btn
+                            <div class ="saveBtn"><i class="far fa-save"></i></div>
                         </div>
                         </div>
                         </div>
@@ -170,28 +143,27 @@
                 </div>
                 </div>
 
-                <div class="container">
-                    <div class="row">
+            <div class="container">
+                <div class="row">
                     <div class="col-sm-2">
                     <div class="card">
                     <div class="card-body">
-                        2 PM 
+                        1 PM 
                     </div>
                     </div>
                     </div>
                     
-                        <div class="col-sm-7">
-                        <div class="card">
-                        <div class="card-body">
-                            notes area placeholder
-                        </div>
-                        </div>
-                        </div>
+                    <div class="col-sm-8">
+                        <div class="form-group textarea"><div id="onePM">
+                        <textarea class="form-control" placeholder="text goes here..."></textarea></div>
+                          </div>
+                    </div>
+                    
                     
                         <div class="col-sm-2">
                             <div class="card">
                             <div class="card-body">
-                                save btn
+                                <div class ="saveBtn"><i class="far fa-save"></i></div>
                             </div>
                             </div>
                             </div>
@@ -199,28 +171,27 @@
                     </div>
                     </div>
 
-                    <div class="container">
-                        <div class="row">
+                <div class="container">
+                    <div class="row">
                         <div class="col-sm-2">
                         <div class="card">
                         <div class="card-body">
-                            3 PM 
+                            2 PM 
                         </div>
                         </div>
                         </div>
                         
-                            <div class="col-sm-7">
-                            <div class="card">
-                            <div class="card-body">
-                                notes area placeholder
-                            </div>
-                            </div>
-                            </div>
+                        <div class="col-sm-8">
+                            <div class="form-group textarea"><div id="twoPM">
+                            <textarea class="form-control" placeholder="text goes here..."></textarea></div>
+                              </div>
+                        </div>
+                        
                         
                             <div class="col-sm-2">
                                 <div class="card">
                                 <div class="card-body">
-                                    save btn
+                                    <div class ="saveBtn"><i class="far fa-save"></i></div>
                                 </div>
                                 </div>
                                 </div>
@@ -228,28 +199,27 @@
                         </div>
                         </div>
 
-                        <div class="container">
-                            <div class="row">
+                    <div class="container">
+                        <div class="row">
                             <div class="col-sm-2">
                             <div class="card">
                             <div class="card-body">
-                                4 PM 
+                                3 PM 
                             </div>
                             </div>
                             </div>
                             
-                                <div class="col-sm-7">
-                                <div class="card">
-                                <div class="card-body">
-                                    notes area placeholder
-                                </div>
-                                </div>
-                                </div>
+                            <div class="col-sm-8">
+                                <div class="form-group textarea"><div id="threePM">
+                                <textarea class="form-control" placeholder="text goes here..."></textarea></div>
+                                  </div>
+                            </div>
+                            
                             
                                 <div class="col-sm-2">
                                     <div class="card">
                                     <div class="card-body">
-                                        save btn
+                                        <div class ="saveBtn"><i class="far fa-save"></i></div>
                                     </div>
                                     </div>
                                     </div>
@@ -257,34 +227,63 @@
                             </div>
                             </div>
 
-                            <div class="container">
-                                <div class="row">
+                        <div class="container">
+                            <div class="row">
                                 <div class="col-sm-2">
                                 <div class="card">
                                 <div class="card-body">
-                                    5 PM 
+                                    4 PM 
                                 </div>
                                 </div>
                                 </div>
                                 
-                                    <div class="col-sm-7">
-                                    <div class="card">
-                                    <div class="card-body">
-                                        notes area placeholder
-                                    </div>
-                                    </div>
-                                    </div>
+                                <div class="col-sm-8">
+                                    <div class="form-group textarea"><div id="fourPM">
+                                    <textarea class="form-control" placeholder="text goes here..."></textarea></div>
+                                      </div>
+                                </div>
+                                
                                 
                                     <div class="col-sm-2">
                                         <div class="card">
                                         <div class="card-body">
-                                            save btn
+                                            <div class ="saveBtn"><i class="far fa-save"></i></div>
                                         </div>
                                         </div>
                                         </div>
                                   
                                 </div>
                                 </div>
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                    <div class="card">
+                                    <div class="card-body">
+                                        5 PM 
+                                    </div>
+                                    </div>
+                                    </div>
+                                    
+                                    <div class="col-sm-8">
+                                        <div class="form-group textarea"><div id="fivePM">
+                                        <textarea class="form-control" placeholder="text goes here..."></textarea></div>
+                                          </div>
+                                    </div>
+                                    
+                                    
+                                        <div class="col-sm-2">
+                                            <div class="card">
+                                            <div class="card-body">
+                                                <div class ="saveBtn"><i class="far fa-save"></i></div>
+                                            </div>
+                                            </div>
+                                            </div>
+                                      
+                                    </div>
+                                    </div><div class="footer" style="text-align: center">
+                                poopship destroyer</div>
+                          
 
 <!-- moment js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
