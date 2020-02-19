@@ -21,42 +21,50 @@ function textNine(){
 function textTen(){
 	var dataToSaveTen = document.getElementById("inputTen").value;
 	localStorage.setItem("data", dataToSaveTen);
-
+	console.log(dataToSaveTen);
 }
 function textEleven(){
 	var dataToSaveEleven = document.getElementById("inputEleven").value;
 	localStorage.setItem("data", dataToSaveEleven);
-
+	console.log(dataToSaveEleven);
 }
 function textTwelve(){
 	var dataToSaveTwelve = document.getElementById("inputTwelve").value;
 	localStorage.setItem("data", dataToSaveTwelve);
-
+	console.log(dataToSaveTwelve);
 }
 function textOne(){
 	var dataToSaveOne = document.getElementById("inputOne").value;
 	localStorage.setItem("data", dataToSaveOne);
-
+	console.log(dataToSaveOne);
 }
 function textTwo(){
 	var dataToSaveTwo = document.getElementById("inputTwo").value;
 	localStorage.setItem("data", dataToSaveTwo);
-
+	console.log(dataToSaveTwo);
 }
 function textThree(){
 	var dataToSaveThree = document.getElementById("inputThree").value;
 	localStorage.setItem("data", dataToSaveThree);
-
+	console.log(dataToSaveThree);
 }
 function textFour(){
 	var dataToSaveFour = document.getElementById("inputFour").value;
 	localStorage.setItem("data", dataToSaveFour);
-	
+	console.log(dataToSaveFour);
 }
 function textFive(){
 	var dataToSaveFive = document.getElementById("inputFive").value;
 	localStorage.setItem("data", dataToSaveFive);
-	alert(dataToSaveFive);
+	console.log(dataToSaveFive);
 }
 
+if (textNine) {
+localStorage.setItem("data", dataToSaveNine);
+location.reload();
+}
 
+if (textTen) {
+	localStorage.setItem("data", dataToSaveTen);
+	location.reload();
+	}
