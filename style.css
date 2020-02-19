@@ -16,7 +16,7 @@
 }
 
 body {
-    background-color: red;
+    background-color: lavenderblush;
 }
 
 .card {
@@ -37,11 +37,11 @@ body {
   }
 
   .card-body :hover {
-    background-color: chocolate;
+    background-color: whitesmoke;
     width: auto;
   }
 
 #nineAM, #tenAM, #elevenAM, #twelvePM, #onePM, #twoPM, #threePM, #fourPM, #fivePM {
     background-color: teal;
-    border: teal 5px solid;
+    border: teal 7px solid;
 }
