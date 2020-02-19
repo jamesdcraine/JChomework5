@@ -15,7 +15,7 @@ insertCurrentDay();
 
 function textNine(){
 	var dataToSaveNine = document.getElementById("inputNine").value;	
-	localStorage.setItem('data', dataToSaveNine);
+	localStorage.setItem("data", dataToSaveNine);
 	console.log(dataToSaveNine);
 }
 function textTen(){
@@ -58,13 +58,3 @@ function textFive(){
 	localStorage.setItem("data", dataToSaveFive);
 	console.log(dataToSaveFive);
 }
-
-if (textNine) {
-localStorage.setItem("data", dataToSaveNine);
-location.reload();
-}
-
-if (textTen) {
-	localStorage.setItem("data", dataToSaveTen);
-	location.reload();
-	}
