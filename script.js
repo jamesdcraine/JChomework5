@@ -58,3 +58,15 @@ function textFive(){
 	localStorage.setItem("data", dataToSaveFive);
 	console.log(dataToSaveFive);
 }
+
+textNine();
+textTen();
+textEleven();
+textTwelve();
+textOne();
+textTwo();
+textThree();
+textFour();
+textFive();
+
+// change background based on hour
