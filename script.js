@@ -4,10 +4,6 @@ var today = moment();
 // putting the current date in a variable
 var currentDay = moment().format("dddd, MMMM " + "Do, YYYY " + "-- HH:mm a");
 var currentHour = moment().format("HH");
-console.log(currentHour);
-
-
-console.log(currentHour);
 
 // setting the date
 function insertCurrentDay() {
@@ -76,120 +72,98 @@ textFive();
 
 // change background based on hour
 
-
-var beginningTime = moment("9", "HH");
-var endTime = moment("5", "HH");
-
 if (currentHour > 9 ) {
 	document.getElementById("nineAM").style.borderColor = "grey";
 }
-
 else if (currentHour = 9) {
 	document.getElementById("nineAM").style.borderColor = "red";
 }
-
 else if (currentHour < 9) {
 	document.getElementById("nineAM").style.borderColor = "green";
 }
-
-
 if (currentHour > 10 ) {
 	document.getElementById("tenAM").style.borderColor = "grey";
 }
-
 else if (currentHour = 10) {
 	document.getElementById("tenAM").style.borderColor = "red";
 }
-
 else if (currentHour < 10) {
 	document.getElementById("tenAM").style.borderColor = "green";
 }
-
 if (currentHour > 11 ) {
 	document.getElementById("elevenAM").style.borderColor = "grey";
 }
-
 else if (currentHour = 11) {
 	document.getElementById("elevenAM").style.borderColor = "red";
 }
-
 else if (currentHour < 11) {
 	document.getElementById("elevenAM").style.borderColor = "green";
 }
-
 if (currentHour > 12 ) {
 	document.getElementById("twelvePM").style.borderColor = "grey";
 }
-
 else if (currentHour = 12) {
 	document.getElementById("twelvePM").style.borderColor = "red";
 }
-
 else if (currentHour < 12) {
 	document.getElementById("twelvePM").style.borderColor = "green";
 }
-
 if (currentHour > 13 ) {
 	document.getElementById("onePM").style.borderColor = "grey";
 }
-
 else if (currentHour = 13) {
 	document.getElementById("onePM").style.borderColor = "red";
 }
-
 else if (currentHour < 13) {
 	document.getElementById("onePM").style.borderColor = "green";
 }
-
 if (currentHour > 14 ) {
 	document.getElementById("twoPM").style.borderColor = "grey";
 }
-
 else if (currentHour = 14) {
 	document.getElementById("twoPM").style.borderColor = "red";
 }
-
 else if (currentHour < 14) {
 	document.getElementById("twoPM").style.borderColor = "green";
 }
-
-
 if (currentHour > 15 ) {
 	document.getElementById("threePM").style.borderColor = "grey";
 }
-
 else if (currentHour == 15) {
 	document.getElementById("threePM").style.borderColor = "red";
 }
-
 else if (currentHour < 15) {
 	document.getElementById("threePM").style.borderColor = "green";
 }
-
 if (currentHour > 16 ) {
 	document.getElementById("fourPM").style.borderColor = "grey";
 }
-
 else if (currentHour == 16) {
 	document.getElementById("fourPM").style.borderColor = "red";
 }
-
 else if (currentHour < 16) {
 	document.getElementById("fourPM").style.borderColor = "green";
 }
-
-
 if (currentHour > 17 ) {
 	document.getElementById("fivePM").style.borderColor = "grey";
 }
-
 else if (currentHour == 17) {
 	document.getElementById("fivePM").style.borderColor = "red";
 }
-
 else if (currentHour < 17) {
 	document.getElementById("fivePM").style.borderColor = "green";
 }
+
+document.getElementById("result").innerHTML = localStorage.getItem("inputNine");
+document.getElementById("result").innerHTML = localStorage.getItem("inputTen");
+document.getElementById("result").innerHTML = localStorage.getItem("inputEleven");
+document.getElementById("result").innerHTML = localStorage.getItem("inputTwelve");
+document.getElementById("result").innerHTML = localStorage.getItem("inputOne");
+document.getElementById("result").innerHTML = localStorage.getItem("inputTwo");
+document.getElementById("result").innerHTML = localStorage.getItem("inputThree");
+document.getElementById("result").innerHTML = localStorage.getItem("inputFour");
+document.getElementById("result").innerHTML = localStorage.getItem("inputFive");
+
 
 
 
