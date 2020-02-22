@@ -15,7 +15,8 @@ insertCurrentDay();
 // setting up local storage
 function textNine(){
 	var dataToSaveNine = document.getElementById("inputNine").value;	
-	localStorage.setItem("inputNine", dataToSaveNine);
+	localStorage.setItem("inputNine", dataToSaveNine);  
+	console.log(dataToSaveNine)
 }
 function textTen(){
 	var dataToSaveTen = document.getElementById("inputTen").value;
@@ -48,6 +49,8 @@ function textFour(){
 function textFive(){
 	var dataToSaveFive = document.getElementById("inputFive").value;
 	localStorage.setItem("inputFive", dataToSaveFive);
+	localStorage.getItem(dataToSaveFive);
+	console.log(dataToSaveFive);
 }
 
 textNine();
@@ -65,7 +68,7 @@ textFive();
 if (currentHour > 9 ) {
 	document.getElementById("nineAM").style.borderColor = "grey";
 }
-else if (currentHour = 9) {
+else if (currentHour == 9) {
 	document.getElementById("nineAM").style.borderColor = "red";
 }
 else if (currentHour < 9) {
@@ -74,7 +77,7 @@ else if (currentHour < 9) {
 if (currentHour > 10 ) {
 	document.getElementById("tenAM").style.borderColor = "grey";
 }
-else if (currentHour = 10) {
+else if (currentHour == 10) {
 	document.getElementById("tenAM").style.borderColor = "red";
 }
 else if (currentHour < 10) {
@@ -83,7 +86,7 @@ else if (currentHour < 10) {
 if (currentHour > 11 ) {
 	document.getElementById("elevenAM").style.borderColor = "grey";
 }
-else if (currentHour = 11) {
+else if (currentHour == 11) {
 	document.getElementById("elevenAM").style.borderColor = "red";
 }
 else if (currentHour < 11) {
@@ -92,7 +95,7 @@ else if (currentHour < 11) {
 if (currentHour > 12 ) {
 	document.getElementById("twelvePM").style.borderColor = "grey";
 }
-else if (currentHour = 12) {
+else if (currentHour == 12) {
 	document.getElementById("twelvePM").style.borderColor = "red";
 }
 else if (currentHour < 12) {
@@ -101,7 +104,7 @@ else if (currentHour < 12) {
 if (currentHour > 13 ) {
 	document.getElementById("onePM").style.borderColor = "grey";
 }
-else if (currentHour = 13) {
+else if (currentHour == 13) {
 	document.getElementById("onePM").style.borderColor = "red";
 }
 else if (currentHour < 13) {
@@ -110,7 +113,7 @@ else if (currentHour < 13) {
 if (currentHour > 14 ) {
 	document.getElementById("twoPM").style.borderColor = "grey";
 }
-else if (currentHour = 14) {
+else if (currentHour == 14) {
 	document.getElementById("twoPM").style.borderColor = "red";
 }
 else if (currentHour < 14) {
